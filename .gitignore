@@ -1,0 +1,8 @@
+# Ignore Logs
+*.log
+
+# Ignore the build directory
+config.py
+
+# Ignore IDE specific files
+__pycache__/
