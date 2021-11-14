@@ -10,7 +10,7 @@ bot = Bot(token=TOKEN)
 
 users = [162099941, 320349065]
 
-redis_cl = redis.Redis("127.0.0.1", 6379, db=0, password="HelloWorld123")
+redis_cl = redis.Redis(host=DB_HOST, port=DB_PORT, db=0, password=DB_PASS)
 
 print(redis_cl.dump("test.rdb"))
 
