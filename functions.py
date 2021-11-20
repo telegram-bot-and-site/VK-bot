@@ -72,8 +72,6 @@ class BD:
 
         tmp_json: dict = json.loads(tmp_jsonstr)
 
-        # tmp_out = {}
-
         for key, value in zip(tmp_json, values[1:]):
             if value == '/ ': continue
             tmp_json[key] = value
@@ -129,9 +127,6 @@ class BD:
         
         l_string += f"Оплачено: {info['lessons_have']} занятия"
         
-        # unixtime = time.mktime(lessons["time"]) datetime to UNIX time 
-        # dt = datetime.datetime.strptime("20/10/2020-15:00", "%d/%m/%Y-%H:%M") String to time :\
-        
         return l_string
 
     def get_lesson(self, id: int) -> str:
@@ -140,13 +135,6 @@ class BD:
         if data == None: return "ERROR :/"
 
         info = json.loads(data)
-
-        '''
-        Расписание занятий
-        -> Каждую пятницу в 17:00
-        -> Домашнее задание: бла-бла
-        -> Осталось уроков: 1
-        '''
 
         return f'''О занятиях
 -> {info["lesson"]}
@@ -166,4 +154,3 @@ class BD:
 -> Возраст: {info['age']}
 -> Курс: {info['course']}
 -> Уровень: {info['lvl']}'''
-              # -> Комментарии: {info['comment']}
