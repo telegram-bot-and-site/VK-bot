@@ -16,9 +16,6 @@ logger = logging.basicConfig(filename=f"logs\\{date_str}_log.log", level=logging
 
 cash = {}
 
-# for admin in ADMINS:
-#     cash[admin] = ""
-
 bd = BD()
 
 user_keyboard = Keyboard(one_time=False).add(Text("-> 📌 Личный кабинет", {"profile": "local"})
