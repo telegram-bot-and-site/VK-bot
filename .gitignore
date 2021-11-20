@@ -1,5 +1,6 @@
 # Ignore Logs
 *.log
+logs/
 
 # Ignore the build directory
 config.py
